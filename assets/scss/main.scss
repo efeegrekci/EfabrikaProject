@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    font-family: 'DM Sans', sans-serif;
+  }
+}
+
+.title-color {
+  background: linear-gradient(0deg, #191D23, #191D23), linear-gradient(266.01deg, #059669 -5.75%, #00D090 91.18%), linear-gradient(266.01deg, #55CBFB -21.73%, #1D4ED8 96.22%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tick-icon {
+  background-image: url(@/static/icons/tick-icon.svg);
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 9px;
+  display: block;
+}
+
+.close-icon {
+  background-image: url(@/static/icons/close-icon.svg);
+  background-repeat: no-repeat;
+  width: 9px;
+  height: 9px;
+  display: block;
+}
+
+.arrow-icon {
+  background-image: url(@/static/icons/arrow-icon.svg);
+  background-repeat: no-repeat;
+  width: 107px;
+  height: 88px;
+  display: block;
+}
