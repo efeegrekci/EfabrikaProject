@@ -1,6 +1,6 @@
 # efabrikaProject
 
-# DEMO http://corapp.com.tr/
+# DEMO https://corapp.com.tr/
 
 ## Build Setup
 
