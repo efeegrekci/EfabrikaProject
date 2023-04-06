@@ -4,8 +4,8 @@
         class="w-full font-manrope px-5 grid justify-center grid-cols-1 gap-6 lg:container xl:grid-cols-3 xl:px-0 lg:m-auto">
         <li v-for="(item, index) in data" :key="index"
             class="w-full py-10 px-6 rounded-xl transition-shadow group even:bg-blue-100 shadow-3xl xl:shadow-none xl:hover:shadow-3xl cursor-pointer">
-            <div class="text-black-100 group-even:text-white font-bold text-2xl mb-2.5">{{ item.title }}</div>
-            <div class="text-gray-200 group-even:text-gray-500 mb-5">{{ item.description }}</div>
+            <h3 class="text-black-100 group-even:text-white font-bold text-2xl mb-2.5">{{ item.title }}</h3>
+            <h4 class="text-gray-200 group-even:text-gray-500 mb-5">{{ item.description }}</h4>
             <div class="mb-5 flex items-center">
                 <span class="text-black-100 group-even:text-white text-5xl font-semibold mr-2">${{ switchValData ?
                     item.price * 0.75 : item.price }}</span>
