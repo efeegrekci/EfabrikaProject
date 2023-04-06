@@ -1,7 +1,7 @@
 <template>
   <main class="py-10 lg:py-28">
     <Title :data="data.titleComponent" />
-    <SwitchButton @switchWasEdited="switchVal = $event" :switchValData="switchVal" :data="data.switchComponent" />
+    <SwitchButton @switchWasChanged="switchVal = $event" :switchValData="switchVal" :data="data.switchComponent" />
     <Plans :switchValData="switchVal" :data="data.plannerList" />
   </main>
 </template>

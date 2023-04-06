@@ -5,9 +5,9 @@
     <label for="switchBtn" class="flex cursor-pointer select-none items-center mx-6">
       <div class="relative">
         <input type="checkbox" id="switchBtn" class="sr-only" @click="clickSwitch()" />
-        <div class="block h-6 w-11 rounded-full " :class="switchValData ? 'bg-blue-100' : 'bg-gray-400'"></div>
+        <div class="block h-6 w-11 rounded-full " :class="switchValDataClone ? 'bg-blue-100' : 'bg-gray-400'"></div>
         <div class="absolute h-5 w-5 rounded-full top-[2px] bg-white transition-all"
-          :class="switchValData ? 'left-[22px]' : 'left-[2px]'"></div>
+          :class="switchValDataClone ? 'left-[22px]' : 'left-[2px]'"></div>
       </div>
     </label>
     <span>{{ data.textSecond }}</span>
@@ -22,10 +22,15 @@
 export default {
   name: 'SwitchButton',
   props: ['switchValData', 'data'],
+  data(){
+    return{
+      switchValDataClone: this.switchValData
+    }
+  },
   methods: {
     clickSwitch() {
-      this.switchValData = !this.switchValData
-      this.$emit("switchWasEdited", this.switchValData)
+      this.switchValDataClone = !this.switchValDataClone
+      this.$emit("switchWasChanged", this.switchValDataClone)
     }
   }
 }
